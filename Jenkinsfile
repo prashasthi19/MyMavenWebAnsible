@@ -30,7 +30,7 @@ pipeline {
         stage('Deploy') {
             steps {
                sh 'mvn clean package'  
-               ansiblePlaybook playbook: 'ansible/playbook.yml', inventory: 'ansible/hosts.ini'
+               ansible-Playbook playbook: 'ansible/playbook.yml', inventory: 'ansible/hosts.ini'
             }
         }
 
