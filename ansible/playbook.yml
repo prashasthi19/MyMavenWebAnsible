@@ -6,9 +6,9 @@
       copy:
         src: "/var/snap/jenkins/4865/workspace/MyMavenWebAnsible-CICD-Pipeline/target/MavenAnsibleWebApp.war"
         dest: "/opt/tomcat/webapps/MavenAnsibleWebApp.war"
-        remote_src: yes
+        remote_src: no
 
     - name: Restart Tomcat
-      systemd: http://localhost:9090/MyMavenWebAnsible/
+      systemd: 
         name: tomcat
         state: restarted
