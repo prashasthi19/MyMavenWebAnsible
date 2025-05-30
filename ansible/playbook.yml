@@ -9,6 +9,6 @@
         remote_src: yes
 
     - name: Restart Tomcat
-      systemd:
+      systemd: http://localhost:9090/MyMavenWebAnsible/
         name: tomcat
         state: restarted
